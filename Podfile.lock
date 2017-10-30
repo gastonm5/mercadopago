@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Kingfisher (4.2.0)
+  - SCLAlertView (0.7.0)
+  - SVProgressHUD (2.2.2)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Kingfisher (~> 4.0)
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift`, branch `master`)
+  - SVProgressHUD
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SCLAlertView:
+    :branch: master
+    :git: https://github.com/vikmeup/SCLAlertView-Swift
+
+CHECKOUT OPTIONS:
+  SCLAlertView:
+    :commit: 85329ce66c297bea79ddef92908ff2040174ccf9
+    :git: https://github.com/vikmeup/SCLAlertView-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 445109b0c8bff27caba9a91b24c289dcfef9cc7a
+
+COCOAPODS: 1.3.1

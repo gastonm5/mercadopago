@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasePickerViewController" customModule="MercadoPago" customModuleProvider="target">
+            <connections>
+                <outlet property="pickerButton" destination="VG9-jT-MQ1" id="UGd-s9-vV5"/>
+                <outlet property="pickerLabel" destination="f8R-nN-Mns" id="3oa-T6-ejH"/>
+                <outlet property="pickerView" destination="Wao-js-Rkk" id="TNP-a8-UrE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dLN-aN-HHX">
+                    <rect key="frame" x="67" y="20" width="240" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="4al-VL-peQ"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="20D-7p-vzg">
+                    <rect key="frame" x="27" y="231" width="320" height="283.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8R-nN-Mns">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="27.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                            <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wao-js-Rkk">
+                            <rect key="frame" x="0.0" y="27.5" width="320" height="216"/>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG9-jT-MQ1">
+                            <rect key="frame" x="100" y="243.5" width="120" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VG9-jT-MQ1" secondAttribute="trailing" constant="100" id="HDe-Z0-ZlE"/>
+                        <constraint firstAttribute="trailing" secondItem="f8R-nN-Mns" secondAttribute="trailing" id="VBq-40-sHL"/>
+                        <constraint firstItem="VG9-jT-MQ1" firstAttribute="leading" secondItem="20D-7p-vzg" secondAttribute="leading" constant="100" id="Xx2-Pg-9k5"/>
+                        <constraint firstItem="f8R-nN-Mns" firstAttribute="leading" secondItem="20D-7p-vzg" secondAttribute="leading" id="ojp-Kg-riK"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.77404172260000004" green="0.95202750859999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="20D-7p-vzg" secondAttribute="trailing" constant="27.5" id="839-o4-GQ0"/>
+                <constraint firstItem="dLN-aN-HHX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="M5z-wk-sv8"/>
+                <constraint firstItem="dLN-aN-HHX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MNK-zz-lEu"/>
+                <constraint firstItem="20D-7p-vzg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27.5" id="QVL-6c-H3Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dLN-aN-HHX" secondAttribute="trailing" constant="68" id="Y1e-7B-q73"/>
+                <constraint firstItem="20D-7p-vzg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="39.25" id="zoW-VC-EsM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="119.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="418" height="418"/>
+    </resources>
+</document>

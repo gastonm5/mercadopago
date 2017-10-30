@@ -1,0 +1,13 @@
+"order_approved_title" = "¡Tu compra ha sido aprobada!";
+"ok_button" = "Aceptar";
+"order_amount_title" = "Monto del pago";
+"amount_zero_warning" = "El monto del pago debe ser mayor a 0";
+
+"payment_method_label" = "Seleccioná un medio de pago";
+"choose_button" = "Seleccionar";
+"message_title" = "Mensaje";
+"amount_exceeded_warning" = "El monto excede la cantdidad permitida para este medio de pago";
+
+"card_issuer_label" = "Seleccioná un banco";
+
+"installments_label" = "Seleccioná la cantidad de cuotas";
