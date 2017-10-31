@@ -76,6 +76,7 @@ class InstallmentsViewController: BasePickerViewController {
     
     override func searchDataArray(array: [JSON]) -> [JSON] {
         var arr : [JSON] = [JSON]()
+        //Se tiene en cuenta que las cuotas están dentro del objeto "payer_costs"
         if array.count != 0 {
             arr = array[0]["payer_costs"].array!
         }

@@ -53,23 +53,27 @@ class PaymentMethodViewController: BasePickerViewController {
         order?.paymentMethod = paymentMethodsArray[row]
     }
     
+    //Tengo en cuenta el monto maximo permitido por el medio de pago
     override func handleObjectFromJSON(json: JSON) {
         let paymentMethod = PaymentMethod(id: json["id"].stringValue, name: json["name"].stringValue, image: json["secure_thumbnail"].stringValue, paymentTypeId: json["payment_type_id"].stringValue, maxAllowedAmount: json["max_allowed_amount"].intValue)
         paymentMethodsArray.append(paymentMethod)
     }
     
-   override func selectDefaultPickerRow(){
+    
+    override func selectDefaultPickerRow(){
         let index = paymentMethodsArray.count/2
         order?.paymentMethod = paymentMethodsArray[index]
         pickerView.selectRow(index, inComponent: 0, animated: false)
     }
     
+    //Muestro alerta indicando que se esta excendiendo del monto permitido
     func showExceededAmountWarning() {
         let alert = UIAlertController(title: NSLocalizedString("message_title", comment: ""), message: NSLocalizedString("amount_exceeded_warning", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("ok_button", comment: ""), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
+    //Si el metodo de pago es de tipo Tarjeta de Credito, muestro los bancos asociados, sino avanzo directamente a pantalla de seleccion cuotas
     func goToNextViewController() {
         var vc : BasePickerViewController? = nil
         if order?.paymentMethod?.paymentTypeId == "credit_card"{

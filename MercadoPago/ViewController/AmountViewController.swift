@@ -6,6 +6,7 @@
 //  Copyright © 2017 Gmazzeo. All rights reserved.
 //
 
+
 import UIKit
 import SCLAlertView
 
@@ -62,23 +63,22 @@ class AmountViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    //
     @objc func editingChanged(_ textField: UITextField) {
         textField.text = getFormattedAmount(amount: amount)
     }
     
+    //Se setean parámetros generales del input de monto
     func setupAmountInput() {
         amountInput.textAlignment = .right
         amountInput.keyboardType = .numberPad
         amountInput.text = getFormattedAmount(amount: amount)
         amountInput.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
     }
-
-    @IBAction func buttonClicked(_ sender: Any) {
-        let paymentMethodVC = PaymentMethodViewController()
-        navigationController?.pushViewController(paymentMethodVC, animated: true)
-    }
     
+    //Se presiona el boton de ingresar monto
     @IBAction func buttonPressed(_ sender: Any) {
+        //Si el monto es menor que 0 muestro un alerta, sino avanzo a selección de medio de pago
         if amount > 0 {
             goToPaymentMethodViewController()
         }
@@ -92,6 +92,7 @@ class AmountViewController: UIViewController {
     }
     
     func goToPaymentMethodViewController() {
+        //Se crea nueva orden de pago y se le asigna el monto ingresado
         let paymentMethodVC = PaymentMethodViewController()
         let order = Order()
         order.amount = amount
@@ -105,6 +106,7 @@ class AmountViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //Se visualizan los datos de la orden de pago aprobada 
     func showApprovedOrderAlert(_order: Order) {
         var text = ""
         if let paymentMethod = _order.paymentMethod{

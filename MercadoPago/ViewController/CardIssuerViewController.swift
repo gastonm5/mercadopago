@@ -70,6 +70,7 @@ class CardIssuerViewController: BasePickerViewController {
     }
     
     override func handleEmptyResponseArray() {
+        //Si el medio de pago no tiene bancos asociados, avanzo directamente a la pantalla de seleccion de cuotas
         goToInstallmentsViewController(dismiss: true)
     }
 }
