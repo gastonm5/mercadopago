@@ -9,7 +9,7 @@ Es necesario tener CocoaPods instalado para poder instalar las dependencias del 
 Una vez instalado ejecutar el siguiente comando para instalar las dependencias.
 
 ```sh
-$ cd MercadoPago
+$ cd mercadopago
 $ pod install
 ```
 
